@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1'></script>
+    <script>
+    show_size = function (){
+      $("#width").html($(window).width());
+      $("#height").html($(window).height());
+    };
+    $(window).on("load resize", (function(){
+      show_size();
+    }));
+    </script>
+  </head>
+  <body>
+    <p>window_width: <span id="width"></span></p>
+    <p>window_height: <span id="height"></span></p>
+  </body>
+</html>
