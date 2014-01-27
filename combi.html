@@ -3,7 +3,9 @@
     <script src="http://blog.livedoor.jp/dankogai/js/combinatorics.js"></script>
     <script>
     var cmb, a;
-    cmb = Combinatorics.power(['a','b','c','d']);
+    cmb = Combinatorics.power(['a','b','c','d']).filter(function(a){
+      return a.length < 4;
+    });
     cmb.forEach(function(a){document.write("<p>"+a+"</p>")});
     </script>
   </head>
